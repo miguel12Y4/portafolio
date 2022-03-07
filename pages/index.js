@@ -17,13 +17,13 @@ const tec = [
 		title: 'Sistema de gestión de inventario',
 		ruta: '',
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['Postgres','Node', 'Git', 'Express', 'Javascript', 'HTML/Bootstrap']
+		tecnologias: ['Postgres', 'Node', 'Git', 'Express', 'Javascript', 'HTML/Bootstrap']
 	},
 	{
 		title: 'Sistema de etiquetado de imagenes',
 		ruta: '',
 		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['React/Redux', 'HTML/CSS','Git', 'Django', 'Postgres', 'Docker']
+		tecnologias: ['React/Redux', 'HTML/CSS', 'Git', 'Django', 'Postgres', 'Docker']
 	},
 	{
 		title: 'this.Portafolio',
@@ -94,7 +94,7 @@ export default function FirstPost() {
 				</div>
 				<h2>Otros proyectos más pequeños</h2>
 				<div>
-				<CardProyecto img={false} title={tec[3].title} description={tec[3].description} ruta={tec[3].ruta} tecnologias={tec[3].tecnologias} />
+					<CardProyecto img={false} title={tec[3].title} description={tec[3].description} ruta={tec[3].ruta} tecnologias={tec[3].tecnologias} />
 					<CardProyecto img={false} title={tec[4].title} description={tec[4].description} ruta={tec[4].ruta} tecnologias={tec[4].tecnologias} />
 				</div>
 			</section>
@@ -103,7 +103,15 @@ export default function FirstPost() {
 				<div className={styles.containerForm}>
 					<h2>Formulario de contacto</h2>
 
-					<form name="contact" method="POST" data-netlify="true">
+					<form name="contact"
+						method="POST"
+						netlify-honeypot="bot-field"
+						data-netlify="true">
+						<p class="hidden">
+							<label>
+								No llenar esto: <input name="bot-field" />
+							</label>
+						</p>
 						<div>
 							<label htmlFor="nombre">Nombre</label>
 							<input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" />
