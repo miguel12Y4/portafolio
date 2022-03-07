@@ -103,7 +103,7 @@ export default function FirstPost() {
 				<div className={styles.containerForm}>
 					<h2>Formulario de contacto</h2>
 
-					<form data-netlify="true">
+					<form name="contact" method="POST" data-netlify="true">
 						<div>
 							<label htmlFor="nombre">Nombre</label>
 							<input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" />
