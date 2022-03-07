@@ -121,7 +121,7 @@ export default function FirstPost() {
 						</div>
 						<div>
 							<label htmlFor="email">Email</label>
-							<input type="email" name="email" id="email" requiredplaceholder="Ingresa tu email" />
+							<input type="email" name="email" id="email" required placeholder="Ingresa tu email" />
 						</div>
 						<div>
 							<label htmlFor="mensaje">Mensaje</label>
