@@ -104,6 +104,7 @@ export default function FirstPost() {
 					<h2>Formulario de contacto</h2>
 
 					<form name="contact"
+						action="/"
 						method="POST"
 						netlify-honeypot="bot-field"
 						data-netlify="true">
@@ -114,15 +115,15 @@ export default function FirstPost() {
 						</p>
 						<div>
 							<label htmlFor="nombre">Nombre</label>
-							<input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" />
+							<input type="text" name="nombre" id="nombre" required placeholder="Ingresa tu nombre" />
 						</div>
 						<div>
 							<label htmlFor="email">Email</label>
-							<input type="email" name="email" id="email" placeholder="Ingresa tu email" />
+							<input type="email" name="email" id="email" requiredplaceholder="Ingresa tu email" />
 						</div>
 						<div>
 							<label htmlFor="mensaje">Mensaje</label>
-							<textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingresa tu mensaje"></textarea>
+							<textarea name="mensaje" id="mensaje" cols="30" rows="10" required placeholder="Ingresa tu mensaje"></textarea>
 						</div>
 						<div data-netlify-recaptcha="true"></div>
 						<input type="submit" value="Enviar" />
