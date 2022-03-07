@@ -1,0 +1,138 @@
+.containerHeader{
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background-color: #023047;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 2px 2px 20px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header{
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    margin: 10px 0px;
+    margin-left: 20px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.movil{
+    display:none;
+}
+
+
+.header nav ul{
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul li{
+    margin-right: 10px;
+    list-style: none;
+}
+
+.header nav ul a{
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    font-weight: bold;
+}
+
+.footer{
+    height: auto;
+    background: #d81e1e;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.footer img{
+    width: 30px;
+    height: 30px;
+}
+
+.datos{
+    text-align: center;
+    font-size:16px;
+    line-height:16px
+}
+
+.datos img{
+    padding-top: 3px;
+    margin-right: 10px;
+}
+
+.datos div{
+    display: flex;
+    align-items: center;
+}
+
+.datos a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Arreglos footer y header para hacer el diseño reponsivo*/
+
+@media screen and (min-width:0px) and (max-width:500px){
+    .footer{
+        flex-direction: column;
+    }
+
+    .header{
+        flex-direction: column;
+    }
+
+    .header nav ul{
+        flex-direction: column;
+    }
+
+    .movil{
+        display: inline;
+    }
+
+    .movil img{
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    .containerNav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header{
+        display: block;
+    }
+
+    .logo img{
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (min-width:501px){
+    .navResponse{
+        display:none !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    .navOriginal{
+        display:none !important;
+    }
+}
+
+.oculto{
+    opacity:0;
+}

@@ -1,0 +1,144 @@
+.container{
+    background-color: #0c2a4b;
+    width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 20px 6px rgba(0, 0, 0, 0.726);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+.containerImg{
+    position: relative;
+    overflow:hidden;
+    cursor: pointer
+}
+
+.containerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+}
+
+.containerImg > div {
+    width: 100%;
+    height: 100%;
+    border-radius:7px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    background-color:rgba(110, 112, 110, 0.603);
+}
+.containerImg > div > p{
+    margin: 20px 0;
+    padding: 0 5px;
+}
+.containerImg:hover > div{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.tecnologias{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.tecnologias span{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 7px;
+
+}
+
+.tecnologias span:hover{
+    cursor: default;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.726);
+
+}   
+
+.container h3{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.button{
+    background-color: #ea7317;
+    border-radius: 7px;
+    border: 0px;
+    margin: 10px 0px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ff4800;
+}
+
+.modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(85, 107, 85, 0.411);
+    transition: all 0.25s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.containerModal{
+    width: 450px;
+    margin: 0 10px;
+    padding: 15px;
+    background-color: #023047;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.5);
+}
+
+.containerModal button {
+    border-radius: 7px;
+    background-color: #ea7317;
+    border: 0px;
+    width: 50%;
+    height: 25px;
+    font-weight: bold;
+}
+
+.containerModal button:hover {
+    background-color: #ff4800;
+    color: white;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width:450px) and (min-width:0px) {
+    .containerModal{
+        width: 100vw;
+        min-width: 350px;
+    }
+}
