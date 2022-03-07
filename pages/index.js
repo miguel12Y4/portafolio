@@ -108,7 +108,9 @@ export default function FirstPost() {
 						method="POST"
 						netlify-honeypot="bot-field"
 						data-netlify="true">
-						<p style={{display: 'none'}}>
+						<input type='hidden' name='contact'
+							value='contact' />
+						<p style={{ display: 'none' }}>
 							<label>
 								No llenar esto: <input name="bot-field" />
 							</label>
@@ -125,7 +127,6 @@ export default function FirstPost() {
 							<label htmlFor="mensaje">Mensaje</label>
 							<textarea name="mensaje" id="mensaje" cols="30" rows="10" required placeholder="Ingresa tu mensaje"></textarea>
 						</div>
-						<div data-netlify-recaptcha="true"></div>
 						<input type="submit" value="Enviar" />
 					</form>
 				</div>
