@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import styles from '../styles/layout.module.css'
+import React, { useState } from 'react';
+import styles from '../styles/layout.module.css';
 
 
 export default function Layout({ children }) {
@@ -28,19 +28,19 @@ export default function Layout({ children }) {
             {openNav ?
               <>
                 <ul className={styles.navResponse}>
-                  <li><a href="">Sobre mí</a></li>
-                  <li><a href="">Tecnologías</a></li>
-                  <li><a href="">Proyectos</a></li>
-                  <li><a href="">Contacto</a></li>
+                  <li><a href="#inicio">Sobre mí</a></li>
+                  <li><a href="#proyectos">Proyectos</a></li>
+                  <li><a href="#otros_proyectos">Otros proyectos</a></li>
+                  <li><a href="#contacto">Contacto</a></li>
                 </ul>
               </>
               : <></>}
-              <ul className={styles.navOriginal}>
-                  <li><a href="">Sobre mí</a></li>
-                  <li><a href="">Tecnologías</a></li>
-                  <li><a href="">Proyectos</a></li>
-                  <li><a href="">Contacto</a></li>
-                </ul>
+            <ul className={styles.navOriginal}>
+              <li><a href="#inicio">Sobre mí</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+              <li><a href="#otros_proyectos">Otros proyectos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
           </nav>
         </header>
       </div>
@@ -50,14 +50,11 @@ export default function Layout({ children }) {
           <span>© Miguel Saavedra Aravena</span>
         </div>
         <div>
-          <a href="">
+          <a href="https://github.com/miguel12Y4">
             <img src="/images/github.png" alt="" />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/miguel-saavedra-586ab8229/">
             <img src="/images/linkedin.png" alt="" />
-          </a>
-          <a href="">
-
           </a>
         </div>
 

@@ -224,7 +224,7 @@
 
 .containerProyecto{
     padding: 15px;
-    padding-top: 15px;
+    padding-top: 60px;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -260,10 +260,11 @@
     z-index: 10;
     color: white;
     width: 500px;
+    margin-top: 80px;
 }
 
 .containerForm div{
-    margin-top:50px;
+    margin-top:60px;
 }
 
 .containerForm h2{

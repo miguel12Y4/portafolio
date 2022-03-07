@@ -59,7 +59,7 @@ export default function FirstPost() {
 			<Head>
 				<title>Mi primer post</title>
 			</Head>
-			<section className={styles.container}>
+			<section id="inicio" className={styles.container}>
 				<div className={styles.principalFrente}>
 					<div className={styles.containerH}>
 
@@ -85,13 +85,15 @@ export default function FirstPost() {
 				</div>
 			</section>
 
-			<section className={styles.containerProyecto}>
+			<section id="proyectos" className={styles.containerProyecto}>
 				<h2>Proyectos en los que he trabajado</h2>
 				<div>
 					<CardProyecto title={tec[0].title} description={tec[0].description} ruta={tec[0].ruta} tecnologias={tec[0].tecnologias} />
 					<CardProyecto title={tec[1].title} description={tec[1].description} ruta={tec[1].ruta} tecnologias={tec[1].tecnologias} />
 					<CardProyecto title={tec[2].title} description={tec[2].description} ruta={tec[2].ruta} tecnologias={tec[2].tecnologias} />
 				</div>
+			</section>
+			<section id="otros_proyectos" className={styles.containerProyecto}>
 				<h2>Otros proyectos más pequeños</h2>
 				<div>
 					<CardProyecto img={false} title={tec[3].title} description={tec[3].description} ruta={tec[3].ruta} tecnologias={tec[3].tecnologias} />
@@ -99,7 +101,7 @@ export default function FirstPost() {
 				</div>
 			</section>
 
-			<section className={styles.sectionForm}>
+			<section id="contacto" className={styles.sectionForm}>
 				<div className={styles.containerForm}>
 					<h2>Formulario de contacto</h2>
 
@@ -135,6 +137,6 @@ export default function FirstPost() {
 				</div>
 			</section>
 
-		</Layout>
+		</Layout >
 	)
 }
