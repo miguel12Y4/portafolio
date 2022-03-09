@@ -99,12 +99,18 @@
         display: inline;
     }
 
+    .movil{
+        width: 60px;
+        height: 40px;
+    }
+    
+    
     .movil img{
         width: 40px;
         height: 40px;
         margin: 0 10px;
+        opacity: 1;
     }
-
     .containerNav{
         display: flex;
         align-items: center;
@@ -135,4 +141,43 @@
 
 .oculto{
     opacity:0;
+}
+
+.navResponse{
+    animation: nav 0.3s ease-out;
+    
+}
+@keyframes nav {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
+
+.btnAnimX{
+    animation: buttonX 1s ease-out;
+    
+}
+
+.btnAnimO{
+    animation: buttonO 1s ease-out;
+    
+}
+@keyframes buttonO {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes buttonX {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

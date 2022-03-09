@@ -1,45 +1,39 @@
 import React, { useEffect, useState } from 'react';
 
-import Link from 'next/link'
 import Head from 'next/head'
-import Script from 'next/script'
 import Layout from '../components/Layout'
 
 import styles from '../styles/home.module.css'
 
-import ImgMovil from '../components/ImgMovil';
 import CardProyecto from '../components/CardProyecto';
-import CardSimple from '../components/CardSimple';
 
 
 const tec = [
 	{
 		title: 'Sistema de gestión de inventario',
-		ruta: '',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['Postgres', 'Node', 'Git', 'Express', 'Javascript', 'HTML/Bootstrap']
+		ruta: ['inventario1.png', 'inventario2.png', 'inventario3.png'],
+		description: ['Este fué mi primer proyecto web "serio", Consistía en un sistema para manejar el inventario de productos de un liceo.','El sistema implementaba la arquitectura cliente-servidor por lo tanto se creó un backend con NodeJS y Express, la Base de datos con postgresSQL y el frontend con vanilla Javascript y Bootstrap.', 'Aquí aprendí los fundamentos del desarrollo web entendiendo cómo van los datos desde el frontend pasando por el backend hasta llegar a la base de datos y viceversa.'],
+		tecnologias: ['Postgres', 'Node', 'Git', 'Express', 'Javascript', 'HTML/Bootstrap'],
+		link: 'https://github.com/miguel12Y4/inventario'
 	},
 	{
 		title: 'Sistema de etiquetado de imagenes',
-		ruta: '',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['React/Redux', 'HTML/CSS', 'Git', 'Django', 'Postgres', 'Docker']
+		ruta: ['video1.png', 'video2.jpg', 'video3.png'],
+		description: ['Sistema para el etiquetado y clasificación de imagenes capturadas de cámaras de seguridad para posteriormente entrenar modelos de Machine Learning para el reconocimiento de objetos.', 'En este caso nos centramos en rehacer el frontend con ReactJS usando librerias de terceros para modificar un canvas donde se muestran las detecciones.', 'Se necesitó comunicarse con una API creada con Python y Django para obtener y guardar los datos.', 'Además se tuvo qe aplicar conocimientos de Docker para poder containerizar la aplicación completa junto con su base de datos.'],
+		tecnologias: ['React/Redux', 'HTML/CSS', 'Git', 'Django', 'Postgres', 'Docker'],
 	},
 	{
 		title: 'this.Portafolio',
-		ruta: '',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['React', 'HTML/CSS', 'NextJS', 'Git']
+		ruta: ['portafolio1.png', 'portafolio2.png', 'portafolio3.png'],
+		description: ['Proyecto para hacer mi página web (La que está viendo actualmente).', 'Se implementó con NextJS un framework de React para rear sitios web estaticos y los estilos fueron con CSS puro para afianzar los fundamentos.', 'Los conceptos principales aprendidos fueron los fundamentos de NextJS y CSS a un nivel un poco mayor aprendiendo a usar animaciones y transiciones.'],
+		tecnologias: ['React', 'HTML/CSS', 'NextJS', 'Git'],
+		link:'https://github.com/miguel12Y4/portafolio'
 	},
 	{
-		title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit animi dolore at amet et quasi!',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['React', 'HTML/CSS', 'NextJS', 'Git']
-	},
-	{
-		title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit animi dolore at amet et quasi!',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum corrupti repellendus, molestiae vel adipisci rerum maiores quas, sequi delectus numquam aspernatur perferendis iusto culpa earum repellat autem doloremque voluptate?',
-		tecnologias: ['React', 'HTML/CSS', 'NextJS', 'Git']
+		title: 'Proyecto universitario: Creación de API REST para la gestión de notas de un colegio',
+		description: ['Proyecto universitario correspodiente a la asignatura de Ingeniería de software.', 'Fué una API REST creada con Java y Spring Boot, MariaDB como base de datos relacional y Postman para probar la aplicación.'],
+		tecnologias: ['Java', 'Spring Boot', 'MariaDB', 'Postman', 'Git'],
+		link:'https://github.com/miguel12Y4/sistema-de-gestion-de-notas'
 	}
 ]
 
@@ -65,7 +59,7 @@ export default function FirstPost() {
 
 						<h1>Hola, soy Miguel</h1>
 						<h2>Desarrollador de software junior</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, nesciunt vel. Vel omnis natus deserunt necessitatibus? Ut est quia voluptates.</p>
+						<p>Soy un apacionado por la tecnología, especialmente por el mundo web. Me encantaría encontrar un lugar donde pueda aprender cosas nuevas y crecer como desarrollador. Cualquier oferta de trabajo es bienvenida!</p>
 					</div>
 					<img className={styles.pc} src="/images/pc.png" />
 				</div>
@@ -88,16 +82,15 @@ export default function FirstPost() {
 			<section id="proyectos" className={styles.containerProyecto}>
 				<h2>Proyectos en los que he trabajado</h2>
 				<div>
-					<CardProyecto title={tec[0].title} description={tec[0].description} ruta={tec[0].ruta} tecnologias={tec[0].tecnologias} />
-					<CardProyecto title={tec[1].title} description={tec[1].description} ruta={tec[1].ruta} tecnologias={tec[1].tecnologias} />
-					<CardProyecto title={tec[2].title} description={tec[2].description} ruta={tec[2].ruta} tecnologias={tec[2].tecnologias} />
+					<CardProyecto title={tec[0].title} description={tec[0].description} ruta={tec[0].ruta} tecnologias={tec[0].tecnologias}  link={tec[0].link}/>
+					<CardProyecto title={tec[1].title} description={tec[1].description} ruta={tec[1].ruta} tecnologias={tec[1].tecnologias} link={tec[1].link}/>
+					<CardProyecto title={tec[2].title} description={tec[2].description} ruta={tec[2].ruta} tecnologias={tec[2].tecnologias} link={tec[2].link}/>
 				</div>
 			</section>
 			<section id="otros_proyectos" className={styles.containerProyecto}>
 				<h2>Otros proyectos más pequeños</h2>
 				<div>
-					<CardProyecto img={false} title={tec[3].title} description={tec[3].description} ruta={tec[3].ruta} tecnologias={tec[3].tecnologias} />
-					<CardProyecto img={false} title={tec[4].title} description={tec[4].description} ruta={tec[4].ruta} tecnologias={tec[4].tecnologias} />
+					<CardProyecto img={false} title={tec[3].title} description={tec[3].description} ruta={tec[3].ruta} tecnologias={tec[3].tecnologias} link={tec[3].link}/>
 				</div>
 			</section>
 

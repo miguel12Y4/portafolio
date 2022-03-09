@@ -16,12 +16,12 @@ export default function Layout({ children }) {
           <div className={styles.containerNav}>
             <span className={styles.movil + " " + styles.oculto}><img src="/iconos/hamburguesa.png" alt="" /></span>
             <div className={styles.logo}>
-              <img src="/images/profile.jpg" alt="" />
+              <img src="/yo.jpeg" alt="" />
             </div>
             <span className={styles.movil} onClick={handleNav}>
               {openNav ?
-                <img src="/iconos/x.png" alt="" />
-                : <img src="/iconos/hamburguesa.png" alt="" />}
+                <img className= {styles.btnAnimX} src="/iconos/x.png" alt="" />
+                : <img className= {styles.btnAnimO} src="/iconos/hamburguesa.png" alt="" />}
             </span>
           </div>
           <nav>
@@ -53,7 +53,7 @@ export default function Layout({ children }) {
           <a href="https://github.com/miguel12Y4">
             <img src="/images/github.png" alt="" />
           </a>
-          <a href="https://www.linkedin.com/in/miguel-saavedra-586ab8229/">
+          <a href="https://www.linkedin.com/in/miguel12y4/">
             <img src="/images/linkedin.png" alt="" />
           </a>
         </div>

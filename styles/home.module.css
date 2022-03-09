@@ -261,6 +261,16 @@
     color: white;
     width: 500px;
     margin-top: 80px;
+    animation: modal 2s ease-in-out;
+}
+
+@keyframes modal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .containerForm div{
