@@ -46,12 +46,13 @@
 
 .footer{
     height: auto;
-    background: #d81e1e;
+    background: #16425b;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    color:white;
 }
 
 .footer img{
@@ -77,7 +78,7 @@
 
 .datos a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 /*Arreglos footer y header para hacer el diseño reponsivo*/

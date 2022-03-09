@@ -14,6 +14,7 @@ function CardProyecto({title, ruta, description, tecnologias, img=true, link }) 
 
 	const nextImg = ()=>{
 		if(!ruta) return
+		console.log('img')
 		setImg(idx=>{
 			const i = (idx%ruta.length)+1
 			if(i>=ruta.length){
@@ -34,7 +35,7 @@ function CardProyecto({title, ruta, description, tecnologias, img=true, link }) 
 		<div className={styles.container}>
 			{img?<h3>{title}</h3>:<h4>{title}</h4>}
 			{img && <div className={styles.containerImg}>
-				{<img src={"/img-data/"+ruta[imgIdx]} alt="" />}
+				{ruta.map((item, idx)=><img key={idx} src={"/img-data/"+item} alt="" className={imgIdx===idx?styles.active:""} />)}
 			</div>}
 			<button className={styles.button} onClick={handleModal}>Ver qué aprendí aquí</button>
 			<div className={styles.tecnologias}>

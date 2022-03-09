@@ -21,8 +21,15 @@
 .containerImg img{
     width: 100%;
     border-radius: 10px;
-    transition: all 0.5s ease-out;
     animation: anim 2s ease-in-out;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.active{
+    display: block !important;
 }
 
 @keyframes anim {
