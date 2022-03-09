@@ -51,7 +51,7 @@ export default function FirstPost() {
 	return (
 		<Layout>
 			<Head>
-				<title>Mi primer post</title>
+				<title>Portafolio</title>
 			</Head>
 			<section id="inicio" className={styles.container}>
 				<div className={styles.principalFrente}>
