@@ -14,7 +14,6 @@ function CardProyecto({title, ruta, description, tecnologias, img=true, link }) 
 
 	const nextImg = ()=>{
 		if(!ruta) return
-		console.log('img')
 		setImg(idx=>{
 			const i = (idx%ruta.length)+1
 			if(i>=ruta.length){
@@ -22,20 +21,29 @@ function CardProyecto({title, ruta, description, tecnologias, img=true, link }) 
 			}
 			return i;
 		})
-		setTimeout(()=>{
-			nextImg()
-		}, 4000)
 	}
 
 	useEffect(()=>{
-		nextImg()
+		setInterval(()=>{
+			nextImg()
+		}, 4000)
 	},[])
+
+	const classnames = (idx)=>{
+		if(imgIdx===idx) return styles.active
+
+		if(imgIdx-1===idx){
+			return styles.noActive
+		}else if(imgIdx===0 && idx===ruta.length-1){
+			return styles.noActive
+		}
+	}
 
 	return (
 		<div className={styles.container}>
 			{img?<h3>{title}</h3>:<h4>{title}</h4>}
 			{img && <div className={styles.containerImg}>
-				{ruta.map((item, idx)=><img key={idx} src={"/img-data/"+item} alt="" className={imgIdx===idx?styles.active:""} />)}
+				{ruta.map((item, idx)=><img key={idx} src={"/img-data/"+item} alt="" className={classnames(idx)} />)}
 			</div>}
 			<button className={styles.button} onClick={handleModal}>Ver qué aprendí aquí</button>
 			<div className={styles.tecnologias}>

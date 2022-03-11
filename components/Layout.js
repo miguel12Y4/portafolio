@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from '../styles/layout.module.css';
 
 
 export default function Layout({ children }) {
   const [openNav, setOpenNav] = useState(false);
 
+  const obj = useRef()
+
   const handleNav = () => {
+    if (openNav === false) {
+
+    }
     setOpenNav(e => !e)
   }
 
@@ -20,21 +25,19 @@ export default function Layout({ children }) {
             </div>
             <span className={styles.movil} onClick={handleNav}>
               {openNav ?
-                <img className= {styles.btnAnimX} src="/iconos/x.png" alt="" />
-                : <img className= {styles.btnAnimO} src="/iconos/hamburguesa.png" alt="" />}
+                <img className={styles.btnAnimX} src="/iconos/x.png" alt="" />
+                : <img className={styles.btnAnimO} src="/iconos/hamburguesa.png" alt="" />}
             </span>
           </div>
           <nav>
-            {openNav ?
-              <>
-                <ul className={styles.navResponse}>
-                  <li><a href="#inicio">Sobre mí</a></li>
-                  <li><a href="#proyectos">Proyectos</a></li>
-                  <li><a href="#otros_proyectos">Otros proyectos</a></li>
-                  <li><a href="#contacto">Contacto</a></li>
-                </ul>
-              </>
-              : <></>}
+            <div className={openNav?styles.navResponseMostrada:" "+" "+styles.navResponseOculto}>
+            <ul className={""}>
+              <li><a href="#inicio">Sobre mí</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+              <li><a href="#otros_proyectos">Otros proyectos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            </div>
             <ul className={styles.navOriginal}>
               <li><a href="#inicio">Sobre mí</a></li>
               <li><a href="#proyectos">Proyectos</a></li>

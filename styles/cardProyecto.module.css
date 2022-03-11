@@ -21,15 +21,33 @@
 .containerImg img{
     width: 100%;
     border-radius: 10px;
-    animation: anim 1.5s linear;
     position: absolute;
-    display: none;
     top: 0;
     left: 0;
+    display: none;
+    transition: all 0.2s linear;
 }
 
 .active{
+    animation: anim 1s linear;
     display: block !important;
+    z-index: 100;
+}
+
+.noActive{
+    display: block !important;
+    animation: anim2 1s linear;
+}
+
+@keyframes anim2 {
+    0%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-650px)
+    }
 }
 
 @keyframes anim {
@@ -49,7 +67,7 @@
     }
 }
 
-.containerImg:hover img{
+.containerImg img:hover{
     transform: scale(1.2);
 }
 

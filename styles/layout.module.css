@@ -129,8 +129,12 @@
 }
 
 @media screen and (min-width:501px){
-    .navResponse{
-        display:none !important;
+    .navResponseMostrada{
+        display: none;
+    }
+    
+    .navResponseOculto{
+        display: none;
     }
 }
 
@@ -144,17 +148,17 @@
     opacity:0;
 }
 
-.navResponse{
-    animation: nav 0.3s ease-out;
-    
+
+.navResponseMostrada{
+    transition: all 0.2s linear;
+    height: 150px;
+    overflow:hidden;
 }
-@keyframes nav {
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(0px)
-    }
+
+.navResponseOculto{
+    transition: all 0.2s linear;
+    overflow:hidden;
+    height: 0px;
 }
 
 .btnAnimX{
