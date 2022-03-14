@@ -59,7 +59,7 @@ export default function FirstPost() {
 
 						<h1>Hola, soy Miguel</h1>
 						<h2>Desarrollador de software junior</h2>
-						<p>Soy un apacionado por la tecnología, especialmente por el mundo web. Me encantaría encontrar un lugar donde pueda aprender cosas nuevas y crecer como desarrollador. Cualquier oferta de trabajo es bienvenida!</p>
+						<p>Soy un apasionado por la tecnología, especialmente por el mundo web. Me encantaría encontrar un lugar donde pueda aprender cosas nuevas y crecer como desarrollador. Cualquier oferta de trabajo es bienvenida!</p>
 					</div>
 					<img className={styles.pc} src="/images/pc.png" />
 				</div>
