@@ -21,6 +21,7 @@ const tec = [
 		ruta: ['video1.png', 'video2.jpg', 'video3.png'],
 		description: ['Sistema para el etiquetado y clasificación de imagenes capturadas de cámaras de seguridad para posteriormente entrenar modelos de Machine Learning para el reconocimiento de objetos.', 'En este caso nos centramos en rehacer el frontend con ReactJS usando librerias de terceros para modificar un canvas donde se muestran las detecciones.', 'Se necesitó comunicarse con una API creada con Python y Django para obtener y guardar los datos.', 'Además se tuvo qe aplicar conocimientos de Docker para poder containerizar la aplicación completa junto con su base de datos.'],
 		tecnologias: ['React/Redux', 'HTML/CSS', 'Git', 'Django', 'Postgres', 'Docker'],
+		
 	},
 	{
 		title: 'this.Portafolio',
@@ -82,13 +83,13 @@ export default function FirstPost() {
 			<section id="proyectos" className={styles.containerProyecto}>
 				<h2>Proyectos en los que he trabajado</h2>
 				<div>
-					<CardProyecto title={tec[0].title} description={tec[0].description} ruta={tec[0].ruta} tecnologias={tec[0].tecnologias}  link={tec[0].link}/>
-					<CardProyecto title={tec[1].title} description={tec[1].description} ruta={tec[1].ruta} tecnologias={tec[1].tecnologias} link={tec[1].link}/>
 					<CardProyecto title={tec[2].title} description={tec[2].description} ruta={tec[2].ruta} tecnologias={tec[2].tecnologias} link={tec[2].link}/>
+					<CardProyecto title={tec[1].title} description={tec[1].description} ruta={tec[1].ruta} tecnologias={tec[1].tecnologias} link={tec[1].link}/>
+					<CardProyecto title={tec[0].title} description={tec[0].description} ruta={tec[0].ruta} tecnologias={tec[0].tecnologias}  link={tec[0].link}/>
 				</div>
 			</section>
 			<section id="otros_proyectos" className={styles.containerProyecto}>
-				<h2>Otros proyectos más pequeños</h2>
+				<h2>Otros proyectos</h2>
 				<div>
 					<CardProyecto img={false} title={tec[3].title} description={tec[3].description} ruta={tec[3].ruta} tecnologias={tec[3].tecnologias} link={tec[3].link}/>
 				</div>
